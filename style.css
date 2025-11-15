@@ -1,0 +1,708 @@
+*:not(head, script, svg, svg *),
+*:not(head, script, svg, svg *)::before,
+*:not(head, script, svg, svg *)::after {
+  all: unset;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: black;
+  color: white;
+  font: normal normal 400 100% / 130% sans-serif;
+  font-family: "Figtree", sans-serif;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+
+article figure {
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+article figure img {
+  width: 100%;
+  height: auto;
+  mask-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+article figure figcaption {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+article figure figcaption h1 {
+  font-size: 180%;
+  line-height: 100%;
+  font-weight: 600;
+  color: #333;
+  text-shadow: 0px 0px 15px black;
+}
+
+article figure figcaption p {
+  font-size: 100%;
+  font-weight: 400;
+  padding-left: 25px;
+  border-left: 2px solid #aaa;
+  color: #555;
+  margin: 12px 0 20px 0;
+  text-shadow: 0px 0px 10px black;
+}
+
+article figure figcaption a {
+  width: 100%;
+  border: 1px solid #777;
+  padding: 10px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 5px 25px black;
+}
+
+article figure div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+article figure div i {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 40%;
+  background: radial-gradient(65% 100% at 50% 0%, #18005b 0%, #000000 100%),
+    radial-gradient(
+      circle at 30% 45%,
+      #ff0000 0%,
+      #ff0000 5%,
+      #ffff00 5%,
+      #ffff00 10%,
+      #00ff00 10%,
+      #00ff00 15%,
+      #00ffff 15%,
+      #00ffff 20%,
+      #0000ff 20%,
+      #0000ff 30%,
+      #ff00ff 30%,
+      #ff00ff 40%,
+      #ff0000 40%
+    ),
+    radial-gradient(
+      circle at 50% 0%,
+      #ff0000 0%,
+      #ff0000 5%,
+      #ffff00 5%,
+      #ffff00 10%,
+      #00ff00 10%,
+      #00ff00 20%,
+      #00ffff 20%,
+      #00ffff 30%,
+      #0000ff 30%,
+      #0000ff 40%,
+      #ff00ff 40%,
+      #ff00ff 50%,
+      #ff0000 50%
+    ),
+    conic-gradient(
+      from 15deg at 20% 420%,
+      #ff0000 0deg,
+      #ff0000 55deg,
+      #ffff00 60deg,
+      #ffff00 120deg,
+      #00ff00 120deg,
+      #00ff00 180deg,
+      #00ffff 180deg,
+      #00ffff 240deg,
+      #0000ff 240deg,
+      #0000ff 300deg,
+      #ff00ff 310deg,
+      #ff00ff 360deg,
+      #ff0000 360deg
+    );
+  background-blend-mode: screen, multiply, multiply, normal;
+  mix-blend-mode: color;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    35% 100%,
+    35% 35%,
+    65% 35%,
+    65% 65%,
+    35% 65%,
+    35% 100%,
+    100% 100%,
+    100% 0%
+  );
+  animation: rotate 45s linear infinite;
+}
+
+article figure div i + i {
+  background: radial-gradient(
+      65% 100% at 50% 0%,
+      #00ff94 0%,
+      rgba(0, 255, 148, 0.25) 100%
+    ),
+    linear-gradient(230deg, #000000 25%, #170059 100%),
+    linear-gradient(215deg, #ffebb9 10%, #19004e 80%),
+    radial-gradient(100% 245% at 100% 100%, #ffffff 0%, #000353 100%),
+    linear-gradient(125deg, #1400ff 0%, #3a0000 100%),
+    linear-gradient(
+      225deg,
+      #00f0ff 30%,
+      #000b6f 45%,
+      #00ebfc 45%,
+      #001676 65%,
+      #00e1f6 65%,
+      #001676 85%,
+      #00ecfd 85%,
+      #001676 100%
+    ),
+    linear-gradient(
+      135deg,
+      #00f0ff 0%,
+      #000b6f 15%,
+      #00ebfc 15%,
+      #001676 35%,
+      #00e1f6 35%,
+      #001676 55%,
+      #00ecfd 55%,
+      #001676 100%
+    );
+  background-blend-mode: soft-light, screen, overlay, overlay, difference,
+    overlay, normal;
+}
+
+article figure div i + i + i {
+  background: linear-gradient(115deg, #000000 0%, #00c508 55%, #000000 100%),
+    linear-gradient(115deg, #0057ff 0%, #020077 100%),
+    conic-gradient(from 110deg at -5% 35%, #000000 0deg, #faff00 360deg),
+    conic-gradient(
+      from 220deg at 30% 30%,
+      #ff0000 0deg,
+      #0000ff 220deg,
+      #240060 360deg
+    ),
+    conic-gradient(
+      from 235deg at 60% 35%,
+      #0089d7 0deg,
+      #0000ff 180deg,
+      #240060 360deg
+    );
+  background-blend-mode: soft-light, soft-light, overlay, screen, normal;
+}
+
+article figure div i + i + i + i {
+  background: linear-gradient(245deg, #000000 0%, #fdff96 100%),
+    linear-gradient(245deg, #0038ff 0%, #000000 100%),
+    radial-gradient(100% 225% at 100% 0%, #4200ff 0%, #001169 100%),
+    linear-gradient(245deg, #000000 0%, #ffb800 100%),
+    radial-gradient(
+      115% 107% at 40% 100%,
+      #eaf5ff 0%,
+      #eaf5ff 40%,
+      #a9c6de calc(40% + 1px),
+      #a9c6de 70%,
+      #247e6c calc(70% + 2px),
+      #247e6c 85%,
+      #e4c666 calc(85% + 2px),
+      #e4c666 100%
+    ),
+    linear-gradient(
+      65deg,
+      #083836 0%,
+      #083836 40%,
+      #66d37e calc(40% + 1px),
+      #66d37e 60%,
+      #c6e872 calc(60% + 1px),
+      #c6e872 100%
+    );
+  background-blend-mode: overlay, screen, overlay, hard-light, overlay, normal;
+}
+
+article figure div i + i + i + i + i {
+  background: linear-gradient(115deg, #ff9797 0%, #0f0068 100%),
+    linear-gradient(245deg, #a8ffe5 0%, #0500ff 100%),
+    radial-gradient(100% 225% at 100% 0%, #ff003d 0%, #000000 100%),
+    radial-gradient(
+      90% 160% at 0% 100%,
+      #e42c64 0%,
+      #e42c64 30%,
+      #614ad3 calc(30% + 1px),
+      #614ad3 60%,
+      #2d248a calc(60% + 1px),
+      #2d248a 70%,
+      #121b74 calc(70% + 1px),
+      #121b74 100%
+    ),
+    linear-gradient(
+      100deg,
+      #48466f 9%,
+      #48466d 35%,
+      #3d84a8 calc(35% + 1px),
+      #3d84a8 65%,
+      #46cdcf calc(65% + 1px),
+      #46cdcf 70%,
+      #abedd8 calc(70% + 1px),
+      #abedd8 100%
+    );
+  background-blend-mode: overlay, overlay, overlay, overlay, normal;
+}
+
+article figure div i + i + i + i + i + i {
+  background: linear-gradient(45deg, #000850 0%, #000320 100%),
+    radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
+    linear-gradient(225deg, #ff7a00 0%, #000000 100%),
+    linear-gradient(
+      135deg,
+      #cdffeb 10%,
+      #cdffeb 35%,
+      #009f9d 35%,
+      #009f9d 60%,
+      #07456f 60%,
+      #07456f 67%,
+      #0f0a3c 67%,
+      #0f0a3c 100%
+    );
+  background-blend-mode: screen, overlay, hard-light, normal;
+}
+
+article figure div i + i + i + i + i + i + i {
+  background: radial-gradient(100% 225% at 100% 0%, #faff00 0%, #000000 100%),
+    linear-gradient(235deg, #db00ff 0%, #000000 100%),
+    linear-gradient(
+      45deg,
+      #241e92 0%,
+      #241e92 40%,
+      #5432d3 40%,
+      #5432d3 50%,
+      #7b6cf6 50%,
+      #7b6cf6 70%,
+      #e5a5ff 70%,
+      #e5a5ff 100%
+    ),
+    linear-gradient(
+      180deg,
+      #01024e 0%,
+      #01024e 43%,
+      #543864 43%,
+      #543864 62%,
+      #8b4367 62%,
+      #8b4367 80%,
+      #ff6464 80%,
+      #ff6464 100%
+    );
+  background-blend-mode: overlay, hard-light, overlay, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i {
+  background: linear-gradient(
+    125deg,
+    #ecfcff 0%,
+    #ecfcff 40%,
+    #b2fcff calc(40% + 1px),
+    #b2fcff 60%,
+    #5edfff calc(60% + 1px),
+    #5edfff 72%,
+    #3e64ff calc(72% + 1px),
+    #3e64ff 100%
+  );
+}
+
+article figure div i + i + i + i + i + i + i + i + i {
+  background: radial-gradient(
+      100% 135% at 90% 0%,
+      #00ff66 0%,
+      #00ff66 33%,
+      #00ffff calc(33% + 1px),
+      #00ffff 75%,
+      #eb00ff calc(75% + 1px),
+      #eb00ff 100%
+    ),
+    radial-gradient(
+      circle at 60% 110%,
+      #00ff66 0%,
+      #00ff66 33%,
+      #00ffff calc(33% + 1px),
+      #00ffff 66%,
+      #eb00ff calc(66% + 1px),
+      #eb00ff 100%
+    ),
+    radial-gradient(
+      100% 225% at 0% 0%,
+      #00ff66 0%,
+      #00ff66 33%,
+      #00ffff calc(33% + 1px),
+      #00ffff 66%,
+      #eb00ff calc(66% + 1px),
+      #eb00ff 100%
+    );
+  background-blend-mode: multiply, multiply, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i {
+  background: radial-gradient(100% 225% at 100% 0%, #faff00 0%, #000000 100%),
+    linear-gradient(235deg, #ff7a00 0%, #000000 100%),
+    linear-gradient(
+      20deg,
+      #241e92 0%,
+      #241e92 30%,
+      #5432d3 calc(30% + 1px),
+      #5432d3 35%,
+      #7b6cf6 calc(35% + 1px),
+      #7b6cf6 50%,
+      #e5a5ff calc(50% + 1px),
+      #e5a5ff 100%
+    ),
+    linear-gradient(
+      120deg,
+      #110133 0%,
+      #110133 40%,
+      #00918e calc(40% + 1px),
+      #00918e 60%,
+      #4dd599 calc(60% + 1px),
+      #4dd599 70%,
+      #ffdc34 calc(70% + 1px),
+      #ffdc34 100%
+    );
+  background-blend-mode: overlay, hard-light, overlay, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i + i {
+  background: linear-gradient(55deg, #000850 0%, #000320 100%),
+    radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
+    linear-gradient(235deg, #bdff00 0%, #000000 100%),
+    linear-gradient(
+      180deg,
+      #002bdc 0%,
+      #002bdc 45%,
+      #2f4bff 45%,
+      #2f4bff 60%,
+      #00a6e7 60%,
+      #00a6e7 80%,
+      #ffe37f 80%,
+      #ffe37f 100%
+    );
+  background-blend-mode: screen, overlay, hard-light, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i + i + i {
+  background: linear-gradient(120deg, #ff0000 0%, #2400ff 100%),
+    linear-gradient(120deg, #fa00ff 0%, #208200 100%),
+    linear-gradient(130deg, #00f0ff 0%, #000000 100%),
+    radial-gradient(110% 140% at 15% 90%, #ffffff 0%, #1700a4 100%),
+    radial-gradient(100% 100% at 50% 0%, #ad00ff 0%, #00ffe0 100%),
+    radial-gradient(100% 100% at 50% 0%, #00ffe0 0%, #7300a9 80%),
+    linear-gradient(30deg, #7ca304 0%, #2200aa 100%);
+  background-blend-mode: overlay, color, overlay, difference, color-dodge,
+    difference, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i + i + i + i {
+  background: radial-gradient(100% 225% at 0% 0%, #de3e3e 0%, #17115c 100%),
+    radial-gradient(100% 225% at 100% 0%, #ff9040 0%, #ff0000 100%),
+    linear-gradient(180deg, #ce63b7 0%, #ed6283 100%),
+    radial-gradient(100% 120% at 75% 0%, #a74600 0%, #000000 100%),
+    linear-gradient(310deg, #0063d8 0%, #16009a 50%);
+  background-blend-mode: overlay, color-dodge, color-burn, color-dodge, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i + i + i + i + i {
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #000000 100%),
+    conic-gradient(red, yellow, lime, aqua, blue, fuchsia, red);
+  background-blend-mode: color-dodge, normal;
+}
+
+article figure div i + i + i + i + i + i + i + i + i + i + i + i + i + i + i {
+  background: linear-gradient(120deg, #0029ff 0%, #001270 100%),
+    radial-gradient(100% 222% at 0% 100%, #cd04ff 0%, #ff004d 57%),
+    linear-gradient(270deg, #f2096b 0%, #ed0b0b 100%),
+    linear-gradient(300deg, #c478b3 0%, #ea2856 100%),
+    radial-gradient(90% 110% at 100% 100%, #96a300 45%, #875901 100%),
+    linear-gradient(6.54deg, #20adfd 7%, #1700a4 50%);
+  background-blend-mode: exclusion, color-dodge, color-burn, color-burn,
+    color-dodge, normal;
+}
+
+article
+  figure
+  div
+  i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i {
+  background: radial-gradient(100% 225% at 100% 0%, #120037 0%, #000000 100%),
+    linear-gradient(35deg, #c0ffc7 0%, #17001f 75%),
+    linear-gradient(55deg, #2400ff 0%, #000000 100%),
+    linear-gradient(
+      90deg,
+      #ffe037 0%,
+      #ffe037 40%,
+      #1dcd9f 40%,
+      #1dcd9f 50%,
+      #088c6f 50%,
+      #088c6f 70%,
+      #23033c 70%,
+      #23033c 100%
+    ),
+    linear-gradient(
+      180deg,
+      #ff8fe5 0%,
+      #ff8fe5 45%,
+      #fbff64 45%,
+      #fbff64 60%,
+      #76e3ff 60%,
+      #76e3ff 80%,
+      #6eb6e7 80%,
+      #6eb6e7 100%
+    );
+  background-blend-mode: screen, overlay, overlay, darken, normal;
+}
+
+article
+  figure
+  div
+  i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i {
+  background: linear-gradient(120deg, #ffffff 0%, #ff006b 100%),
+    linear-gradient(235deg, #ffffff 0%, #ff006b 100%),
+    linear-gradient(235deg, #ffffff 0%, #000000 100%),
+    linear-gradient(
+      90deg,
+      #ffe037 0%,
+      #ffe037 40%,
+      #1dcd9f 40%,
+      #1dcd9f 50%,
+      #088c6f 50%,
+      #088c6f 70%,
+      #23033c 70%,
+      #23033c 100%
+    );
+  background-blend-mode: overlay, overlay, overlay, normal;
+}
+
+article
+  figure
+  div
+  i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i {
+  background: linear-gradient(
+      125deg,
+      #00ff57 0%,
+      #010033 40%,
+      #460043 70%,
+      #f0ffc5 100%
+    ),
+    linear-gradient(55deg, #0014c9 0%, #410060 100%),
+    linear-gradient(300deg, #ffc700 0%, #001aff 100%),
+    radial-gradient(
+      135% 215% at 115% 40%,
+      #393939 0%,
+      #393939 40%,
+      #849561 calc(40% + 1px),
+      #849561 60%,
+      #eed690 calc(60% + 1px),
+      #eed690 80%,
+      #ecefd8 calc(80% + 1px),
+      #ecefd8 100%
+    ),
+    linear-gradient(
+      125deg,
+      #282d4f 0%,
+      #282d4f 40%,
+      #23103a calc(40% + 1px),
+      #23103a 70%,
+      #a0204c calc(70% + 1px),
+      #a0204c 88%,
+      #ff6c00 calc(88% + 1px),
+      #ff6c00 100%
+    );
+  background-blend-mode: overlay, screen, overlay, overlay, normal;
+}
+
+article
+  figure
+  div
+  i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i {
+  background: linear-gradient(
+    40deg,
+    #155263 9%,
+    #155263 43%,
+    #ff6f3c calc(43% + 1px),
+    #ff6f3c 52%,
+    #ff9a3c calc(52% + 1px),
+    #ff9a3c 80%,
+    #ffc93c calc(80% + 1px),
+    #ffc93c 100%
+  );
+}
+
+article
+  figure
+  div
+  i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i
+  + i {
+  background: linear-gradient(235deg, #ffffff 0%, #000f25 100%),
+    linear-gradient(180deg, #6100ff 0%, #000000 100%),
+    linear-gradient(
+      235deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    ),
+    linear-gradient(
+      125deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    );
+  background-blend-mode: soft-light, screen, darken, normal;
+}
+
+article figure div i:nth-child(even) {
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg) scale(1.5);
+  }
+  to {
+    transform: rotateZ(360deg) scale(1.5);
+  }
+}
