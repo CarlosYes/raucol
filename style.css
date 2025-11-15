@@ -51,10 +51,7 @@ article figure {
 article figure img {
   width: 100%;
   height: auto;
-  mask-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 90%
+
   );
 }
 
